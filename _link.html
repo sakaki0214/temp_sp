@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+<script src="shared/js/jquery-1.7.1.min.js"></script>
+
+<script>
+function doScroll(){
+ if(window.pageYOffset === 0){
+  window.scrollTo(0,1);
+ }
+}
+window.onload = function(){
+ setTimeout(doScroll, 100);
+}
+</script>
+
+<style type="text/css">
+* {
+	font-size:14px;
+	margin:0;
+	padding:0
+}
+h1 {
+	padding:10px;
+	font-size:16px;
+}
+ol {
+	border-top:1px solid #ccc;
+}
+a {
+	display:block;
+	padding:10px;
+	border-bottom:1px solid #ccc;
+	text-decoration:none;
+	color:#000;
+}
+</style>
+
+</head>
+<body>
+
+<h1>ページ一覧</h1>
+<ol>
+<li><a href="00_top.jpg">00_top.jpg</a></li>
+<li><a href="01_abouttsubuyaki.jpg">01_abouttsubuyaki.jpg</a></li>
+<li><a href="02_lineup.jpg">02_lineup.jpg</a></li>
+<li><a href="03_cm_30.jpg">03_cm_30.jpg</a></li>
+<li><a href="03_cm.jpg">03_cm.jpg</a></li>
+<li><a href="04_tsubuyaki.jpg">04_tsubuyaki.jpg</a></li>
+<li><a href="05_campaign.jpg">05_campaign.jpg</a></li>
+<li><a href="06_recipe.jpg">06_recipe.jpg</a></li>
+</ol>
+
+</body>
+</html>
