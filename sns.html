@@ -31,12 +31,6 @@ $(document).ready(function(){
      });
 });
 </script>
-<script type="text/javascript">
-window.onload = function(){
-setTimeout(function(){window.scrollTo(0,1);},100);
-}
-</script>
-
 <!-- /横にしたときに拡大したい場合 -->
 
 <!-- アドレスバーを隠したいとき -->
@@ -92,10 +86,13 @@ $(function(){
 <!-- ↑オリジナルボタン↑-->
 
 
-<!--mixi-->
+<!--mixiチェック-->
 <div id="mixi_btn"><a href="http://mixi.jp/share.pl" class="mixi-check-button" data-key="133bfe7c1b975422c2cf23d47d9fdfe811e41378" data-url="" data-button="button-1">mixiチェック</a></div>
 <script type="text/javascript" src="http://static.mixi.jp/js/share.js"></script>
+<!-- ↑公式ボタン（吹き出しあり）↑-->
 
+<a href="javascript:void(0);" onclick="_gaq.push(['_trackPageview','sp_mixi']); window.open('http://mixi.jp/share.pl?u=http://URLを入力&k=mixiチェックキー','share',['width=632','height=456','location=yes','resizable=yes','toolbar=no','menubar=no','scrollbars=no','status=no'].join(','));"><img src="../shared/images/sns_03.png" alt="mixi" width="29"></a>
+<!-- ↑オリジナル画像↑-->
 
 
 <!--google-->
