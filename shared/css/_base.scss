@@ -1,15 +1,7 @@
-@charset "utf-8";
-
-/* ------------------------------------------------------
- *
- * default
- *
- * ------------------------------------------------------ */
-
 /* 
 html5doctor.com Reset Stylesheet
-v1.6
-Last Updated: 2010-08-18
+v1.6.1
+Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com 
 Twitter: @rich_clark
 */
@@ -63,7 +55,7 @@ del {
 	text-decoration: line-through;
 }
 abbr[title], dfn[title] {
-	border-bottom:1px dotted inherit;
+	border-bottom:1px dotted;
 	cursor:help;
 }
 table {
@@ -82,43 +74,27 @@ hr {
 input, select {
 	vertical-align:middle;
 }
-input {
-	font-size:16px;
-}
-img {
-vertical-align:bottom;
-}
 li {
 	list-style-type:none;
 }
-
-/* clearfix */
-.clearfix:after {
-  content: ".";  /* 新しい要素を作る */
-  display: block;  /* ブロックレベル要素に */
-  clear: both;
-  height: 0;
-  visibility: hidden;
+html {
+	overflow-y: scroll;
 }
-
-
-/* ------------------------------------------------------
- *
- * #common parts
- *
- * ------------------------------------------------------ */
-
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style: normal;
+}
+* {
+	word-wrap: break-word;
+}
 body {
+	background: #fff;
+	color: #333;
 	font: 14px/1.231 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','sans-serif';
 	-webkit-text-size-adjust: 100%;
 }
-
-
-/* ------------------------------------------------------
- *
- * #each page
- *
- * ------------------------------------------------------ */
-/* ---------------------------
- * index
- * --------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	line-height:1.5;
+}
+p, li, dt, dd {
+	line-height:1.5;
+}
