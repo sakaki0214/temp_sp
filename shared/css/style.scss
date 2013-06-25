@@ -6,3 +6,44 @@
 @charset "utf-8";
 @import "compass";
 @import "base";
+@import "button";
+
+.mod_btn1 {
+  display:table;
+  margin:0 auto 15px;
+  position:relative;
+  a {
+    @include btn1;
+    width:250px;
+    height:50px;
+    padding:0 25px;
+    &:after {
+      @include btn1-after;
+    }
+  }
+  a.before {
+    &:after {
+      @include btn1-before;
+    }
+  }
+}
+
+.mod_btn2 {
+  display:table;
+  margin:0 auto 15px;
+  position:relative;
+  a {
+    @include btn2;
+    width:300px;
+    height:auto;
+    padding:10px 25px;
+    &:after {
+      @include btn2-after;
+    }
+  }
+  a.before {
+    &:after {
+      @include btn2-before;
+    }
+  }
+}

@@ -111,18 +111,8 @@ address, caption, cite, code, dfn, em, strong, th, var {
 body {
   background: #fff;
   color: #333;
-<<<<<<< HEAD
   font: 14px/1.231 'Helvetica','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','sans-serif';
   -webkit-text-size-adjust: 100%;
-=======
-  font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-* html body {
-  font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
->>>>>>> e2239ef6446ee9e55a9c89c9a7562d0f7fe1b00f
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -132,97 +122,126 @@ h1, h2, h3, h4, h5, h6 {
 p, li, dt, dd {
   line-height: 1.5;
 }
-<<<<<<< HEAD
-=======
 
-input, textarea {
-  font-family: "ＭＳ Ｐゴシック", "MS PGothic", Osaka;
+.mod_btn1 {
+  display: table;
+  margin: 0 auto 15px;
+  position: relative;
+}
+.mod_btn1 a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f0f0f0));
+  background: -webkit-linear-gradient(top, #ffffff, #f0f0f0);
+  background: -moz-linear-gradient(top, #ffffff, #f0f0f0);
+  background: -o-linear-gradient(top, #ffffff, #f0f0f0);
+  background: linear-gradient(top, #ffffff, #f0f0f0);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 2px 1px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 2px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 2px 1px inset;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #999;
+  color: #666;
+  line-height: 1.4;
+  position: relative;
+  width: 250px;
+  height: 50px;
+  padding: 0 25px;
+}
+.mod_btn1 a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  background: url(../images/icon_arrow_r1.png) no-repeat left top;
+  -webkit-background-size: 8px 10px;
+  -moz-background-size: 8px 10px;
+  -o-background-size: 8px 10px;
+  background-size: 8px 10px;
+  width: 8px;
+  height: 10px;
+  margin-top: -5px;
+}
+.mod_btn1 a.before:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  background: url(../images/icon_arrow_r1.png) no-repeat left top;
+  -webkit-background-size: 8px 10px;
+  -moz-background-size: 8px 10px;
+  -o-background-size: 8px 10px;
+  background-size: 8px 10px;
+  width: 8px;
+  height: 10px;
+  margin-top: -5px;
 }
 
-/* ************************************
- *
- * SCSS Media Queries Mixins
- * 
- * Aauthor   : Ryuichi Nonaka
- * Version   : 0.4.0
- * Copyright : 2012 Ryuichi Nonaka
- * Date      : 2012/11/16
- *
- * Released under the MIT license
- *
- *********************************** */
-/* ************************************
- *
- * Device Width 
- * Initialize variables
- *
- *********************************** */
-/* ************************************
- *
- * Browser Prefix 
- * Initialize variables
- *
- *********************************** */
-/* ************************************
- *
- * Return ratio
- * Initialize variables
- * @param $prefix prefix type
- * @param $ratio device ratio
- *
- *********************************** */
-/* ************************************
- *
- * Mobile Device mixin
- * @param $orientation Direction of a device
- * @param $version [old|modern|future|any] The version of a device
- * @param $add_orientation boolean [true|false] add orientation attribute
- *
- * old    : iPhone 3G or 3GS.
- * modern : iPhone 4 or 4S.
- * future : iPhone 5.
- * any    : All version.
- *
- *********************************** */
-/* ************************************
- *
- * Tablet Device mixin
- * @param $orientation Direction of a device
- * @param $version [old|modern|any] The version of a device
- * @param $add_orientation boolean [true|false] add orientation attribute
- *
- * old    : iPad 1 or 2 or mini.
- * modern : new iPad (3).
- * any    : All version.
- *
- *********************************** */
-/* ************************************
- *
- * Desctop Device mixin
- * @param $size Direction of a device
- * @param $version [modern|future|any] The version of a device
- *
- * Version modern ---------------------
- * narrow  : max width 1024.
- * modern  : max width 1280.
- * wide    : max width 1600.
- * hd      : max width 1920.
- * over    : width 1920 over.
- * ratio   : 1.0
- *
- * Version future ---------------------
- * modern : max width 1280.
- * wide   : max width 1440.
- * ratio  : 2.0
- *
- *********************************** */
-/* ************************************
- *
- * Custom Device mixin
- * @param $min_width number(px) Minimum device size
- * @param $max_width number(px) Maximum device size
- * @param $pixel_ratio number Device px ratio
- * @param $add_orientation boolean [true|false] add orientation attribute
- *
- *********************************** */
->>>>>>> e2239ef6446ee9e55a9c89c9a7562d0f7fe1b00f
+.mod_btn2 {
+  display: table;
+  margin: 0 auto 15px;
+  position: relative;
+}
+.mod_btn2 a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #18254d), color-stop(100%, #18254d));
+  background: -webkit-linear-gradient(top, #18254d, #18254d);
+  background: -moz-linear-gradient(top, #18254d, #18254d);
+  background: -o-linear-gradient(top, #18254d, #18254d);
+  background: linear-gradient(top, #18254d, #18254d);
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 2px solid #ccc;
+  color: #fff;
+  line-height: 1.4;
+  position: relative;
+  width: 300px;
+  height: auto;
+  padding: 10px 25px;
+}
+.mod_btn2 a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  background: url(../images/icon_arrow_r2.png) no-repeat left top;
+  -webkit-background-size: 6px 10px;
+  -moz-background-size: 6px 10px;
+  -o-background-size: 6px 10px;
+  background-size: 6px 10px;
+  width: 6px;
+  height: 10px;
+  margin-top: -5px;
+}
+.mod_btn2 a.before:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  background: url(../images/icon_arrow_r2.png) no-repeat left top;
+  -webkit-background-size: 6px 10px;
+  -moz-background-size: 6px 10px;
+  -o-background-size: 6px 10px;
+  background-size: 6px 10px;
+  width: 6px;
+  height: 10px;
+  margin-top: -5px;
+}
