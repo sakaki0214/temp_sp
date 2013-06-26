@@ -1,3 +1,4 @@
+/* ボタン画像（アローアイコンは画像） */
 @mixin btn1 {
   @include box-sizing(border-box);
   @include border-radius(4px);
@@ -69,4 +70,146 @@
   width:6px;
   height:10px;
   margin-top:-5px;
+}
+
+/* ボタン画像（アローアイコンはborder） */
+@mixin btn3 {
+  @include box-sizing(border-box);
+  @include border-radius(4px);
+  @include background(linear-gradient(top,#fff,#f0f0f0));
+  @include box-shadow(rgba(black,0.3) 0 0 2px,rgba(white,0.8) 0 0 2px 1px inset);
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  text-decoration:none;
+  border:1px solid #999;
+  color:#666;
+  line-height:1.4;
+  position:relative;
+}
+@mixin btn3-before {
+  content:"";
+  position:absolute;
+  top:50%;
+  left:10px;
+  border-top:2px solid #9F0;
+  border-right:2px solid #9F0;
+  @include rotate(45deg);
+  width:6px;
+  height:6px;
+  margin-top:-3px;
+}
+@mixin btn3-after {
+  content:"";
+  position:absolute;
+  top:50%;
+  right:10px;
+  border-top:2px solid #9F0;
+  border-right:2px solid #9F0;
+  @include rotate(45deg);
+  width:6px;
+  height:6px;
+  margin-top:-3px;
+}
+
+@mixin btn4 {
+  @include box-sizing(border-box);
+  @include border-radius(0px);
+  @include background(linear-gradient(top,#18254d,#18254d));
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  text-decoration:none;
+  border-bottom:2px solid #ccc;
+  color:#fff;
+  line-height:1.4;
+  position:relative;
+}
+@mixin btn4-before {
+  content:"";
+  position:absolute;
+  top:50%;
+  left:10px;
+  border-top:2px solid #F3C;
+  border-right:2px solid #F3C;
+  @include rotate(45deg);
+  width:6px;
+  height:6px;
+  margin-top:-3px;
+}
+@mixin btn4-after {
+  content:"";
+  position:absolute;
+  top:50%;
+  right:10px;
+  border-top:2px solid #F3C;
+  border-right:2px solid #F3C;
+  @include rotate(45deg);
+  width:6px;
+  height:6px;
+  margin-top:-3px;
+}
+@mixin list-link {
+  @include box-sizing(border-box);
+  display:block;
+  background:#069;
+  border-bottom:2px solid #ccc;
+  color:#fff;
+  text-decoration:none;
+  width:100%;
+  padding:10px 25px 10px 15px;
+  position:relative;
+}
+@mixin list-arrow {
+  @include rotate(45deg);
+  content:"";
+  display:block;
+  width:6px;
+  height:6px;
+  border-top:2px solid #fff;
+  border-right:2px solid #fff;
+  position:absolute;
+  right:10px;
+  top:50%;
+  margin-top:-3px;
+}
+/* list-arrowの色違い*/
+@mixin list-arrow2 {
+  @include rotate(45deg);
+  content:"";
+  display:block;
+  width:6px;
+  height:6px;
+  border-top:2px solid #333;
+  border-right:2px solid #333;
+  position:absolute;
+  right:10px;
+  top:50%;
+  margin-top:-3px;
+}
+@mixin list-arrow-t {
+  @include rotate(315deg);
+  content:"";
+  display:block;
+  width:6px;
+  height:6px;
+  border-top:2px solid #fff;
+  border-right:2px solid #fff;
+  position:absolute;
+  right:10px;
+  top:50%;
+  margin-top:-3px;
+}
+@mixin list-arrow-b {
+  @include rotate(130deg);
+  content:"";
+  display:block;
+  width:6px;
+  height:6px;
+  border-top:2px solid #fff;
+  border-right:2px solid #fff;
+  position:absolute;
+  right:10px;
+  top:50%;
+  margin-top:-3px;
 }

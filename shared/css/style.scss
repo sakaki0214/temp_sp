@@ -47,3 +47,67 @@
     }
   }
 }
+
+.mod_btn3 {
+  display:table;
+  margin:0 auto 15px;
+  position:relative;
+  a {
+    @include btn3;
+    width:250px;
+    height:50px;
+    padding:0 25px;
+    &:after {
+      @include btn3-after;
+    }
+  }
+  a.before {
+    &:after {
+      @include btn3-before;
+    }
+  }
+}
+
+.mod_btn4 {
+  display:table;
+  margin:0 auto 15px;
+  position:relative;
+  a {
+    @include btn4;
+    width:300px;
+    height:auto;
+    padding:10px 25px;
+    &:after {
+      @include btn4-after;
+    }
+  }
+  a.before {
+    &:after {
+      @include btn4-before;
+    }
+  }
+}
+.mod_gnav {
+  a {
+    @include list-link;
+    &:after {
+      @include list-arrow;
+    }
+  }
+  a.more_link:after {
+    @include list-arrow-t;
+  }
+  a.active:after {
+    @include list-arrow-b;
+  }
+}
+
+.mod_gnav_under2 {
+  a {
+    background:#fff;
+    color:#333;
+    &:after {
+      @include list-arrow2;
+    }
+  }
+}
