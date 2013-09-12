@@ -9,6 +9,17 @@
 @import "button";
 @import "form";
 
+@mixin clearfix {
+	*zoom: 1;
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		height: 0;
+		visibility: hidden;
+	}
+}
+
 /* btn (img)
 ------------------------*/
 .mod_btn1 {
