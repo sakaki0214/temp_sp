@@ -1,0 +1,20 @@
+@mixin tx-reset {
+  @include box-sizing(border-box);
+  @include experimental(appearance,none);
+  @include border-radius(0);
+  display:block;
+  border:none;
+  position:relative;
+}
+@mixin select-arrow {
+  content:"";
+  background:url(../images/icon_arrow_b1.png) no-repeat left top;
+  @include background-size(14px auto);
+  display:block;
+  width:14px;
+  height:7px;
+  position:absolute;
+  top:50%;
+  right:10px;
+  margin-top:-3px;
+}

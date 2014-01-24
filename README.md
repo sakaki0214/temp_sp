@@ -1,1 +1,1 @@
-# SPサイト制作用テンプレート
+# smartphone site template

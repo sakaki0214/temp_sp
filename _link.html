@@ -1,15 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html
 <html lang="ja">
+
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title>PAGE LIST</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-
-<script src="shared/js/jquery-1.7.1.min.js"></script>
-
+<script src="shared/js/jquery-1.9.1.min.js"></script>
 <script>
 function doScroll(){
  if(window.pageYOffset === 0){
@@ -20,36 +19,71 @@ window.onload = function(){
  setTimeout(doScroll, 100);
 }
 </script>
-
 <style type="text/css">
 * {
-	font-size:14px;
-	margin:0;
-	padding:0
+  font-size: 14px;
+  margin: 0;
+  padding: 0
 }
 h1 {
-	padding:10px;
-	font-size:16px;
+  padding: 10px;
+  font-size: 16px;
+  text-align:center;
+  background:#333;
+  color:#fff;
+}
+h2 {
+  padding: 10px;
+  font-weight:normal;
+  text-align:center;
+  background:#666;
+  color:#fff;
 }
 ol {
-	border-top:1px solid #ccc;
+  border-top: 1px solid #ccc;
 }
-a {
-	display:block;
-	padding:10px;
-	border-bottom:1px solid #ccc;
-	text-decoration:none;
-	color:#000;
+li a {
+  position:relative;
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+li a:after {
+  content:"";
+  position:absolute;
+  top:50%;
+  right:10px;
+  display:block;
+  width:6px;
+  height:6px;
+  margin-top:-5px;
+  border-top:3px solid #333;
+  border-right:3px solid #333;
+  transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
 }
 </style>
-
 </head>
 <body>
-
-<h1>ページ一覧</h1>
+<h1>PAGE LIST</h1>
+<h2>template</h2>
 <ol>
-<li><a href="00_top.jpg">00_top.jpg</a></li>
-<li><a href="01_page.jpg">01_page.jpg</a></li>
+  <li><a href="00_top.jpg">00_tpl0.jpg</a></li>
+  <li><a href="01_page.jpg">01_tpl1.jpg</a></li>
+</ol>
+
+<h2>001.hoge</h2>
+<ol>
+  <li><a href="00_top.jpg">00_hoge0.jpg</a></li>
+  <li><a href="01_page.jpg">01_hoge1.jpg</a></li>
+</ol>
+
+<h2>002.foo</h2>
+<ol>
+  <li><a href="00_top.jpg">00_hoge0.jpg</a></li>
+  <li><a href="01_page.jpg">01_hoge1.jpg</a></li>
 </ol>
 
 </body>
