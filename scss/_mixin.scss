@@ -1,78 +1,15 @@
-/* ボタン画像（アローアイコンは画像） */
-@mixin btn1 {
-  @include box-sizing(border-box);
-  @include border-radius(4px);
-  @include background(linear-gradient(top,#fff,#f0f0f0));
-  @include box-shadow(rgba(black,0.3) 0 0 2px,rgba(white,0.8) 0 0 2px 1px inset);
-  display:table-cell;
-  vertical-align:middle;
-  text-align:center;
-  text-decoration:none;
-  border:1px solid #999;
-  color:#666;
-  line-height:1.4;
-  position:relative;
+@mixin clearfix {
+	*zoom: 1;
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		height: 0;
+		visibility: hidden;
+	}
 }
-@mixin btn1-before {
-  content:"";
-  position:absolute;
-  top:50%;
-  left:10px;
-  background:url(../images/icon_arrow_r1.png) no-repeat left top;
-  @include background-size(8px 10px);
-  width:8px;
-  height:10px;
-  margin-top:-5px;
-}
-@mixin btn1-after {
-  content:"";
-  position:absolute;
-  top:50%;
-  right:10px;
-  background:url(../images/icon_arrow_r1.png) no-repeat left top;
-  @include background-size(8px 10px);
-  width:8px;
-  height:10px;
-  margin-top:-5px;
-}
-
-@mixin btn2 {
-  @include box-sizing(border-box);
-  @include border-radius(0px);
-  @include background(linear-gradient(top,#18254d,#18254d));
-  display:table-cell;
-  vertical-align:middle;
-  text-align:center;
-  text-decoration:none;
-  border-bottom:2px solid #ccc;
-  color:#fff;
-  line-height:1.4;
-  position:relative;
-}
-@mixin btn2-before {
-  content:"";
-  position:absolute;
-  top:50%;
-  left:10px;
-  background:url(../images/icon_arrow_r2.png) no-repeat left top;
-  @include background-size(6px 10px);
-  width:6px;
-  height:10px;
-  margin-top:-5px;
-}
-@mixin btn2-after {
-  content:"";
-  position:absolute;
-  top:50%;
-  right:10px;
-  background:url(../images/icon_arrow_r2.png) no-repeat left top;
-  @include background-size(6px 10px);
-  width:6px;
-  height:10px;
-  margin-top:-5px;
-}
-
-/* ボタン画像（アローアイコンはborder） */
+/* button
+-----------------------------------*/
 @mixin btn3 {
   @include box-sizing(border-box);
   @include border-radius(4px);
@@ -211,5 +148,28 @@
   position:absolute;
   right:10px;
   top:50%;
+  margin-top:-3px;
+}
+
+/* form
+-----------------------------------*/
+@mixin tx-reset {
+  @include box-sizing(border-box);
+  @include experimental(appearance,none);
+  @include border-radius(0);
+  display:block;
+  border:none;
+  position:relative;
+}
+@mixin select-arrow {
+  content:"";
+  background:url(../images/icon_arrow_b1.png) no-repeat left top;
+  @include background-size(14px auto);
+  display:block;
+  width:14px;
+  height:7px;
+  position:absolute;
+  top:50%;
+  right:10px;
   margin-top:-3px;
 }

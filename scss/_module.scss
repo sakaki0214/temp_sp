@@ -1,56 +1,4 @@
-@mixin clearfix {
-	*zoom: 1;
-	&:after {
-		content: ".";
-		display: block;
-		clear: both;
-		height: 0;
-		visibility: hidden;
-	}
-}
-
-/* btn (img)
-------------------------*/
-.mod_btn1 {
-  display:table;
-  margin:0 auto 15px;
-  position:relative;
-  a {
-    @include btn1;
-    width:250px;
-    height:50px;
-    padding:0 25px;
-    &:after {
-      @include btn1-after;
-    }
-  }
-  a.before {
-    &:after {
-      @include btn1-before;
-    }
-  }
-}
-
-.mod_btn2 {
-  display:table;
-  margin:0 auto 15px;
-  position:relative;
-  a {
-    @include btn2;
-    width:300px;
-    height:auto;
-    padding:10px 25px;
-    &:after {
-      @include btn2-after;
-    }
-  }
-  a.before {
-    &:after {
-      @include btn2-before;
-    }
-  }
-}
-/* btn (no-img)
+/* btn (arrow-border)
 ------------------------*/
 .mod_btn3 {
   display:table;
@@ -178,11 +126,20 @@ input[type=radio] {
   vertical-align:top;
 }
 .mod-submit {
-  @include btn1;
+  @include btn3;
+  cursor:pointer;
   display:block;
   font-size:16px;
   width:250px;
   height:50px;
   margin:0 auto;
   padding:0 25px;
+  &:active {
+    position:relative;
+    top:2px;
+  }
+}
+.mod_error {
+  background:#FFDCDD;
+  border-color:#FFC3C4;
 }
